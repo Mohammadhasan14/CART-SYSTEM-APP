@@ -194,9 +194,9 @@ Food.find().then(res => {
       const deleteData = req.body;
       console.log('deleteData',deleteData)
       try {
-        // const deletePerformance = await Order.findOneAndDelete(
-        //   {_id: deleteData._id}
-        // );
+        const deletePerformance = await Order.findOneAndDelete(
+          {_id: deleteData._id}
+        );
         res.status(200).send('data successfully deleted')
       } catch (error) {
         console.error(error)
