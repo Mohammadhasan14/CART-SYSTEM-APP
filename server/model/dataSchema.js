@@ -20,4 +20,15 @@ const foodSchema = new mongoose.Schema({
 module.exports.Food = mongoose.model('Food', foodSchema)
 
 
+const orderSchema = new mongoose.Schema({
+  _id: String,
+  name: String,
+  email: String,
+  status: String,
+  amount_total: String
+})
+
+module.exports.Order = mongoose.model('Order', orderSchema)
+
+
 
